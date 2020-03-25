@@ -24,6 +24,9 @@
         <nuxt-link v-if="user === null" class="navbar-item" to="/login">{{
           login
         }}</nuxt-link>
+        <nuxt-link v-if="user === null" class="navbar-item" to="/register">{{
+          register
+        }}</nuxt-link>
         <a @click="signOut" v-if="user !== null" class="navbar-item">{{
           logout
         }}</a>
@@ -48,7 +51,8 @@ export default {
     login: "",
     logout: "",
     about: "",
-    profile: ""
+    profile: "",
+    register: ''
   },
   data() {
     return {

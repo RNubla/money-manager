@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar class="box" appName="Money Manager" login="Login" about="About" logout="Logout" profile="Profile"/>
+    <Navbar class="box" appName="Money Manager" login="Login" about="About" logout="Logout" register="Register" profile="Profile"/>
     <nuxt />
   </div>
 </template>
