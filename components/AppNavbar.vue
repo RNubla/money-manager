@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { auth } from "@/services/firebase";
+import { auth, users } from "@/services/firebase";
 import Cookie from "js-cookie";
 import { mapGetters } from "vuex";
 
