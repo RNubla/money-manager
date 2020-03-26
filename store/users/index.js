@@ -1,5 +1,5 @@
 import Cookie from "js-cookie";
-import { auth, activitiesCollection, db } from "@/services/firebase";
+import { auth, activitiesCollection, db, userCollection } from "@/services/firebase";
 
 export const state = () => ({
   user: null,
@@ -32,6 +32,8 @@ export const actions = {
       const token = await auth.currentUser.getIdToken();
       const { email, uid, displayName } = auth.currentUser;
       
+      const userCol = userCollection
+      // let usernameQuery = userCol.where('username')
 
       // set jwt to cookie
       Cookie.set("access_token", token);
@@ -128,5 +130,8 @@ export const getters = {
   },
   currentUser: (state, getters) => {
     return getters.userSate;
+  },
+  getUserName:(state) => {
+    
   }
 };

@@ -20,6 +20,7 @@
     </div>
     <div class="navbar-menu" id="nav-menu" :class="{ 'is-active': isActive }">
       <div class="navbar-end">
+        <!-- <SideNav/> -->
         <a v-if="user !== null" class="navbar-item">{{ user.email }}</a>
         <nuxt-link v-if="user === null" class="navbar-item" to="/login">{{
           login
@@ -43,8 +44,12 @@
 import { auth, users } from "@/services/firebase";
 import Cookie from "js-cookie";
 import { mapGetters } from "vuex";
+import SideNav from '@/components/SideNav'
 
 export default {
+  components: {
+    SideNav
+  },
   props: {
     appName: "",
     dashboard: "",

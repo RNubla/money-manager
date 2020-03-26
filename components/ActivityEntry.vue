@@ -10,8 +10,8 @@
               <p class="control">
                 <span class="select">
                   <select>
-                    <option>+</option>
-                    <option>-</option>
+                    <option title="Money Comming In">+</option>
+                    <option title="Money Being Spent">-</option>
                   </select>
                 </span>
               </p>
